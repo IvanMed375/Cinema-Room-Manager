@@ -82,7 +82,7 @@ public class Cinema {
     public static void main(String[] args) {
         char[][] cinema = new char[9][9];
         Scanner scan = new Scanner(System.in);
-        int rows;Cinema.java
+        int rows;
         int seats;
         final int priceForFrontHalf = 10;
         final int priceForBackHalf = 8;
@@ -94,9 +94,13 @@ public class Cinema {
         boolean smallCinema = false;
         boolean exit = false;
 
-        System.out.println("Enter the number of rows:");
+        System.out.println("""
+                              Welcome to the Cinema Manager!
+                              This is a simulation of a cinema hall.""");
+
+        System.out.println("Enter the number of rows: ");
         rows = scan.nextInt();
-        System.out.println("Enter the number of seats in each row:");
+        System.out.println("Enter the number of seats in each row: ");
         seats = scan.nextInt();
 
         totalSeats = rows * seats;
@@ -118,8 +122,11 @@ public class Cinema {
 
         while (!exit) {
             System.out.println();
-            System.out.println("1. Show the seats\n2. Buy a ticket\n" +
-                    "3. Statistics\n0. Exit");
+            System.out.println("""
+                    1. Show the seats
+                    2. Buy a ticket
+                    3. Statistics
+                    0. Exit""");
             action = scan.nextInt();
             switch (action) {
                 case 1:
